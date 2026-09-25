@@ -1,0 +1,7 @@
+---
+title: Projects
+permalink: /projects/
+description: "김강민이 직접 설계하고 구현한 프로젝트"
+---
+<header class="page-hero section-shell reveal is-visible"><p class="eyebrow">Projects</p><h1>문제에서 출발해<br>동작하는 결과까지.</h1><p>기술 이름보다 무엇을 해결했고, 어떤 선택을 했는지에 집중한 프로젝트입니다.</p></header>
+<section class="section-shell page-projects"><div class="project-grid project-grid-all">{% assign ordered_projects = site.projects | sort: 'order' %}{% for project in ordered_projects %}{% include project-card.html project=project index=forloop.index %}{% endfor %}</div></section>

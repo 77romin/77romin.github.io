@@ -1,4 +1,18 @@
 ---
-layout: home
-# Index page
+description: "문제를 구조화하고 끝까지 구현하는 개발자 김강민의 포트폴리오"
 ---
+{% assign profile = site.data.profile %}
+<section class="hero section-shell">
+  <div class="hero-copy reveal is-visible"><p class="eyebrow"><span class="status-dot"></span>{{ profile.eyebrow }}</p><h1>{{ profile.headline | newline_to_br }}</h1><p class="hero-intro">{{ profile.intro }}</p><div class="button-row"><a class="button button-primary" href="{{ '/projects/' | relative_url }}">프로젝트 보기 <span>→</span></a><a class="button button-secondary" href="mailto:{{ profile.email }}">이메일 보내기 <span>↗</span></a></div></div>
+  <div class="hero-portrait reveal is-visible"><div class="portrait-halo"></div><img src="{{ profile.avatar | relative_url }}" alt="{{ profile.name }}의 일러스트 프로필" width="560" height="560"><div class="portrait-note"><span>Currently</span><strong>Building & learning</strong></div></div>
+  <div class="scroll-note" aria-hidden="true"><span></span>Scroll to explore</div>
+</section>
+<section class="section section-shell" id="featured-projects">
+  <div class="section-heading reveal"><div><p class="eyebrow">Selected work</p><h2>생각을 결과로 만든<br>프로젝트들</h2></div><a class="text-link" href="{{ '/projects/' | relative_url }}">전체 프로젝트 <span>→</span></a></div>
+  <div class="project-grid">{% assign featured_projects = site.projects | where: 'featured', true | sort: 'order' %}{% for project in featured_projects limit: 3 %}{% include project-card.html project=project index=forloop.index %}{% endfor %}</div>
+</section>
+<section class="section activity-section"><div class="section-shell">
+  <div class="section-heading reveal"><div><p class="eyebrow">Activities</p><h2>배우고 시도한<br>과정의 기록</h2></div><a class="text-link" href="{{ '/activities/' | relative_url }}">모든 활동 <span>→</span></a></div>
+  <div class="activity-list">{% for activity in site.data.activities %}<article class="activity-row reveal"><p class="activity-period">{{ activity.period }}</p><div><p class="activity-org">{{ activity.organization }}</p><h3>{{ activity.title }}</h3><p>{{ activity.description }}</p></div><a class="round-link" href="{{ activity.link }}" target="_blank" rel="noreferrer" aria-label="{{ activity.title }} 링크 열기">↗</a></article>{% endfor %}</div>
+</div></section>
+<section class="section section-shell about-preview"><div class="about-preview-number reveal">01</div><div class="about-preview-copy reveal"><p class="eyebrow">About me</p><h2>더 나은 답을 찾기 위해<br>직접 만들고 기록합니다.</h2><p>익숙한 방법을 반복하기보다 문제의 조건을 먼저 살핍니다. 작은 가설을 코드로 검증하고, 선택의 근거와 시행착오를 남겨 다음 결과를 더 단단하게 만듭니다.</p><a class="text-link" href="{{ '/about/' | relative_url }}">더 알아보기 <span>→</span></a></div></section>
