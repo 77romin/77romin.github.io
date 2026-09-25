@@ -1,0 +1,7 @@
+---
+title: Activities
+permalink: /activities/
+description: "개발자로 성장하기 위해 이어 온 학습, 실험, 협업 활동"
+---
+<header class="page-hero section-shell reveal is-visible"><p class="eyebrow">Activities</p><h1>배움은 기록할 때<br>다음 경험이 됩니다.</h1><p>프로젝트 밖에서도 꾸준히 이어 온 학습과 실험, 협업의 과정입니다.</p></header>
+<section class="section-shell activity-page-list">{% for activity in site.data.activities %}<article class="activity-card reveal"><div class="activity-card-top"><span>{{ activity.period }}</span><a href="{{ activity.link }}" target="_blank" rel="noreferrer">View ↗</a></div><p class="activity-org">{{ activity.organization }}</p><h2>{{ activity.title }}</h2><p>{{ activity.description }}</p><ul class="tag-list">{% for tag in activity.tags %}<li>{{ tag }}</li>{% endfor %}</ul></article>{% endfor %}</section>

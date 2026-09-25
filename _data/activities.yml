@@ -1,0 +1,18 @@
+- period: "2026 — Present"
+  title: "Algorithm Study"
+  organization: "Personal Study"
+  description: "Java로 알고리즘 문제를 풀고 풀이를 축적하며, 자료구조와 문제 해결 패턴을 반복 학습하고 있습니다."
+  tags: ["Java", "Baekjoon", "Problem Solving"]
+  link: "https://github.com/77romin/solved_algorithm"
+- period: "2026"
+  title: "VQA Performance Enhancement"
+  organization: "AI Experiment & Analysis"
+  description: "VQA 파이프라인의 데이터, 학습 목표, 추론 방식을 분석하고 성능 향상 과정을 재현 가능한 문서로 정리했습니다."
+  tags: ["VQA", "PyTorch", "Experiment"]
+  link: "https://github.com/77romin/vqa-enhancement"
+- period: "2019"
+  title: "Computer Software Capstone Design"
+  organization: "KwangWoon University"
+  description: "Raspberry Pi와 객체 인식을 활용한 지능형 교통 신호 시스템을 팀 프로젝트로 설계하고 구현했습니다."
+  tags: ["Capstone", "YOLOv3", "Raspberry Pi"]
+  link: "https://github.com/77romin/CapstoneProject2019"

@@ -1,0 +1,8 @@
+- group: "Core"
+  items: ["Java", "Python", "JavaScript", "SQL"]
+- group: "Web & Backend"
+  items: ["Spring Boot", "FastAPI", "Vue.js", "REST API"]
+- group: "Data & AI"
+  items: ["OpenAI API", "VQA", "YOLO", "Data Pipeline"]
+- group: "Tools"
+  items: ["Git", "GitHub Actions", "Docker", "Jekyll"]
