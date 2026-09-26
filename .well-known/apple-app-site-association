@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "NSFKUQF8TG.com.weary.prototype"
+        ],
+        "components": [
+          {
+            "/": "/weary/auth/callback",
+            "comment": "WEARy authentication callback"
+          }
+        ]
+      }
+    ]
+  }
+}
