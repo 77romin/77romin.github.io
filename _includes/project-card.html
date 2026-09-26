@@ -1,14 +1,13 @@
 {% assign project = include.project %}
 <article class="project-card reveal">
-  <a class="project-visual visual-{{ project.accent | default: 'lime' }}" href="{{ project.url | relative_url }}" aria-label="{{ project.title }} 자세히 보기">
-    <span class="project-index">0{{ include.index }}</span><span class="project-monogram" aria-hidden="true">{{ project.monogram }}</span><span class="project-kind">{{ project.kind }}</span>
+  <a class="project-visual visual-{{ project.accent | default: 'blue' }}" href="{{ project.url | relative_url }}" aria-label="{{ project.title }} 자세히 보기">
+    {% if project.image %}<img src="{{ project.image }}" alt="" loading="lazy">{% else %}<span class="project-monogram" aria-hidden="true">{{ project.monogram }}</span>{% endif %}
   </a>
   <div class="project-card-body">
-    <div class="project-card-heading">
-      <div><p class="project-meta">{{ project.period }} · {{ project.role }}</p><h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3></div>
-      <a class="round-link" href="{{ project.url | relative_url }}" aria-label="{{ project.title }} 상세 페이지">↗</a>
-    </div>
+    <p class="project-meta">{{ project.period }} · {{ project.role }}</p>
+    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
     <p>{{ project.summary }}</p>
-    <ul class="tag-list" aria-label="사용 기술">{% for tech in project.stack limit: 5 %}<li>{{ tech }}</li>{% endfor %}</ul>
+    <ul class="tag-list" aria-label="사용 기술">{% for tech in project.stack limit: 4 %}<li>{{ tech }}</li>{% endfor %}</ul>
+    <a class="card-link" href="{{ project.url | relative_url }}">자세히 보기 <span>→</span></a>
   </div>
 </article>
