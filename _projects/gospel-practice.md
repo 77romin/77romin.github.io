@@ -4,6 +4,7 @@ order: 2
 featured: true
 monogram: "GP"
 accent: "amber"
+image: "https://raw.githubusercontent.com/77romin/gospel.letsgomin/main/docs/screenshots/practice-desktop.png"
 kind: "Web · Realtime Audio"
 period: "2026"
 role: "Full-stack Developer"

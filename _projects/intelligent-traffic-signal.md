@@ -4,6 +4,7 @@ order: 4
 featured: false
 monogram: "IT"
 accent: "blue"
+image: "https://raw.githubusercontent.com/77romin/CapstoneProject2019/master/README_Image/structure.png"
 kind: "Capstone · Computer Vision"
 period: "2019"
 role: "Team Developer"

@@ -4,6 +4,7 @@ order: 1
 featured: true
 monogram: "LH"
 accent: "lime"
+image: "https://raw.githubusercontent.com/77romin/localhub/main/docs/images/localhub-home.png"
 kind: "Full-stack · AI"
 period: "2026"
 role: "Full-stack Developer"
