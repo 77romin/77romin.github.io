@@ -10,8 +10,8 @@ description: "문제를 끝까지 구조화하고 실제로 작동하는 소프�
       <h1>문제를 끝까지 구조화하고,<br><em>실제로 작동하는 소프트웨어</em>로<br>답하는 김강민입니다.</h1>
       <p>{{ profile.intro }}</p>
       <div class="contact-links">
-        <a href="mailto:{{ profile.email }}"><span aria-hidden="true">✉</span>{{ profile.email }}</a>
-        <a href="{{ profile.github }}" target="_blank" rel="noreferrer"><span aria-hidden="true">⌘</span>GitHub</a>
+        <a href="mailto:{{ profile.email }}">{% include icon-gmail.html %}{{ profile.email }}</a>
+        <a href="{{ profile.github }}" target="_blank" rel="noreferrer">{% include icon-github.html %}GitHub</a>
       </div>
     </div>
     <div class="profile-image reveal is-visible">
