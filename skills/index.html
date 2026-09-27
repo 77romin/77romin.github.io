@@ -1,0 +1,13 @@
+---
+title: Skills
+permalink: /skills/
+description: "김강민이 사용하고 탐구하는 기술 스택"
+---
+<header class="page-hero section-shell reveal is-visible"><p class="eyebrow">Skills</p><h1>필요한 기술을 배우고,<br>제품에 적용합니다.</h1><p>프로젝트를 통해 사용하고 탐구해 온 언어, 프레임워크와 도구입니다.</p></header>
+<section class="section-shell page-content">
+  <div class="skills-grid">
+    {% for skill_group in site.data.skills %}
+    <article class="skill-card reveal"><p>{{ skill_group.group }}</p><ul class="tech-badge-list">{% for item in skill_group.items %}<li>{% include tech-badge.html name=item %}</li>{% endfor %}</ul></article>
+    {% endfor %}
+  </div>
+</section>
