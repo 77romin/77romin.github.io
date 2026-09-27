@@ -59,7 +59,7 @@ description: "문제를 끝까지 구조화하고 실제로 작동하는 소프�
         <p class="credential-label">Certifications</p>
         <div class="credential-list">
           {% for item in site.data.credentials.certifications %}
-          <article class="credential-item reveal"><div><strong>{{ item.name }}</strong><span>{{ item.detail }}</span></div><time>{{ item.date }}</time></article>
+          <article class="credential-item credential-item-with-logo reveal"><span class="credential-logo"><img class="{{ item.logo_class }}" src="{{ item.logo | relative_url }}" alt="" loading="lazy"></span><div><strong>{{ item.name }}</strong><span>{{ item.detail }}</span></div><time>{{ item.date }}</time></article>
           {% endfor %}
         </div>
       </div>
