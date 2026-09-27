@@ -17,6 +17,17 @@ description: "개발자 김강민의 경험, 일하는 방식, 기술 역량"
 
 <section class="section principles-section"><div class="section-shell"><div class="section-heading reveal"><div><p class="eyebrow">Principles</p><h2>일하는 방식</h2></div></div><div class="principle-grid">{% for principle in profile.principles %}<article class="principle-card reveal"><span>0{{ forloop.index }}</span><h3>{{ principle.title }}</h3><p>{{ principle.description }}</p></article>{% endfor %}</div></div></section>
 
-<section class="section section-shell"><div class="section-heading reveal"><div><p class="eyebrow">Experience & Education</p><h2>경험과 교육</h2></div></div><div class="about-timeline">{% for activity in site.data.activities %}<article class="timeline-row reveal"><time>{{ activity.period }}</time><div><p>{{ activity.organization }}</p><h3>{{ activity.title }}</h3><span>{{ activity.description }}</span></div></article>{% endfor %}</div></section>
+<section class="section section-shell">
+  <div class="section-heading reveal"><div><p class="eyebrow">Experience & Education</p><h2>경험과 교육</h2></div></div>
+  <div class="about-timeline">
+    {% for activity in site.data.activities %}
+    <article class="timeline-row reveal">
+      <time>{{ activity.period }}</time>
+      <span class="timeline-logo"><img src="{{ activity.logo | relative_url }}" alt="" loading="lazy"></span>
+      <div><p>{{ activity.organization }}</p><h3>{{ activity.title }}</h3><span>{{ activity.description }}</span></div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
 
 <section class="section section-shell skills-section"><div class="section-heading reveal"><div><p class="eyebrow">Skills</p><h2>사용하고 탐구하는 기술</h2></div></div><div class="skills-list">{% for skill_group in site.data.skills %}<div class="skill-row reveal"><h3>{{ skill_group.group }}</h3><ul>{% for item in skill_group.items %}<li>{{ item }}</li>{% endfor %}</ul></div>{% endfor %}</div></section>

@@ -36,7 +36,9 @@ description: "문제를 끝까지 구조화하고 실제로 작동하는 소프�
     <div class="experience-grid">
       {% for activity in site.data.activities %}
       <article class="experience-card reveal">
-        <div class="experience-cover cover-{{ forloop.index }}"><span>{{ activity.label }}</span></div>
+        <div class="experience-cover experience-cover-logo">
+          <img class="{{ activity.logo_class }}" src="{{ activity.logo | relative_url }}" alt="" loading="lazy">
+        </div>
         <div class="experience-body">
           <p class="activity-org">{{ activity.organization }}</p>
           <h3>{{ activity.title }}</h3>
