@@ -21,16 +21,16 @@ layout: default
         <div><dt>Focus</dt><dd>{{ page.focus }}</dd></div>
       </dl>
     </div>
-    <div class="project-detail-cover{% if page.image_fit == 'contain' %} project-detail-cover-contain{% endif %} visual-{{ page.accent }}">
-      {% if page.image %}<img src="{{ page.image }}" alt="{{ page.image_alt | default: page.title | escape }}" fetchpriority="high">{% else %}<span class="project-detail-monogram">{{ page.monogram }}</span>{% endif %}
-    </div>
   </header>
   <section class="project-content-section">
     <div class="section-shell project-content-grid">
       <aside class="project-stack">
         <div class="project-stack-card"><p class="mini-label">Technology</p><ul class="tag-list">{% for tech in page.stack %}<li>{{ tech }}</li>{% endfor %}</ul></div>
       </aside>
-      <div class="prose"><p class="mini-label">Project case study</p>{{ content }}</div>
+      <div class="prose github-readme" data-github-readme data-repository="{{ page.github | remove: 'https://github.com/' | remove: 'http://github.com/' }}" data-branch="{{ page.readme_branch | default: 'main' }}" data-github-url="{{ page.github }}">
+        <div class="readme-loading" role="status" aria-live="polite"><span></span><p>GitHub README를 불러오는 중입니다.</p></div>
+        <noscript><p>README를 보려면 JavaScript가 필요합니다. <a href="{{ page.github }}#readme" target="_blank" rel="noreferrer">GitHub에서 README 보기</a></p></noscript>
+      </div>
     </div>
   </section>
   <nav class="section-shell project-next" aria-label="프로젝트 목록으로 이동"><p>More work</p><a href="{{ '/projects/' | relative_url }}">모든 프로젝트 보기 <span>→</span></a></nav>

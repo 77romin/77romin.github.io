@@ -14,6 +14,7 @@ focus: "실시간 차량 인식과 신호 정책"
 summary: "Raspberry Pi와 YOLOv3 차량 인식을 이용해 교차로 대기 시간을 줄이는 지능형 교통 신호 캡스톤 프로젝트입니다."
 stack: ["Java", "Python", "C#", "YOLOv3", "OpenCV", "imagezmq", "Raspberry Pi", "Unity"]
 github: "https://github.com/77romin/CapstoneProject2019"
+readme_branch: "master"
 video: "https://youtu.be/scfMT4KhBmE"
 ---
 ## 프로젝트 개요
