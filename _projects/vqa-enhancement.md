@@ -4,6 +4,8 @@ order: 9
 featured: true
 monogram: "VQ"
 accent: "violet"
+image: "https://raw.githubusercontent.com/77romin/vqa-enhancement/main/docs/images/vqa-architecture-data-pipeline.png"
+image_alt: "VQA 모델의 데이터 파이프라인과 학습·추론 구조"
 kind: "AI · Experiment"
 period: "2026"
 role: "ML Engineer"

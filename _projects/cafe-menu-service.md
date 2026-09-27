@@ -4,8 +4,8 @@ order: 5
 featured: true
 monogram: "CF"
 accent: "blue"
-image: "https://raw.githubusercontent.com/77romin/NBE10-12-1-Team5/main/front/public/coffee_bean.jpg"
-image_alt: "카페 메뉴 관리 서비스의 커피 원두 이미지"
+image: "https://img.youtube.com/vi/1s7iyjXlGFQ/0.jpg"
+image_alt: "카페 메뉴 관리 서비스 시연 영상 썸네일"
 kind: "Full-stack · Team Project"
 period: "2026.06 · 8일"
 role: "Frontend Lead / Project Coordinator"
