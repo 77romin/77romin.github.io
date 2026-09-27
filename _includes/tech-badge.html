@@ -1,0 +1,62 @@
+{% assign badge_name = include.name %}
+{% assign badge_color = '4B5563' %}
+{% assign badge_logo = '' %}
+{% assign badge_logo_color = 'white' %}
+{% case badge_name %}
+  {% when 'Java' or 'Java 25' %}{% assign badge_color = '007396' %}{% assign badge_logo = 'openjdk' %}
+  {% when 'C++' %}{% assign badge_color = '00599C' %}{% assign badge_logo = 'cplusplus' %}
+  {% when 'C#' %}{% assign badge_color = '512BD4' %}{% assign badge_logo = 'dotnet' %}
+  {% when 'JavaScript' %}{% assign badge_color = 'F7DF1E' %}{% assign badge_logo = 'javascript' %}{% assign badge_logo_color = '000000' %}
+  {% when 'TypeScript' %}{% assign badge_color = '3178C6' %}{% assign badge_logo = 'typescript' %}
+  {% when 'Python' %}{% assign badge_color = '3776AB' %}{% assign badge_logo = 'python' %}
+  {% when 'Go' %}{% assign badge_color = '00ADD8' %}{% assign badge_logo = 'go' %}
+  {% when 'SQL' %}{% assign badge_color = '336791' %}{% assign badge_logo = 'postgresql' %}
+  {% when 'HTML5' %}{% assign badge_color = 'E34F26' %}{% assign badge_logo = 'html5' %}
+  {% when 'CSS3' %}{% assign badge_color = '1572B6' %}{% assign badge_logo = 'css3' %}
+  {% when 'SwiftUI' or 'SwiftData' %}{% assign badge_color = 'F05138' %}{% assign badge_logo = 'swift' %}
+  {% when 'AVFoundation' or 'Apple Vision' or 'MapKit' %}{% assign badge_color = '111111' %}{% assign badge_logo = 'apple' %}
+  {% when 'Next.js' or 'Next.js 16' %}{% assign badge_color = '000000' %}{% assign badge_logo = 'nextdotjs' %}
+  {% when 'React 19' %}{% assign badge_color = '20232A' %}{% assign badge_logo = 'react' %}{% assign badge_logo_color = '61DAFB' %}
+  {% when 'Tailwind CSS' %}{% assign badge_color = '06B6D4' %}{% assign badge_logo = 'tailwindcss' %}
+  {% when 'Framer Motion' %}{% assign badge_color = '0055FF' %}{% assign badge_logo = 'framer' %}
+  {% when 'Vue.js' or 'Vue 3' %}{% assign badge_color = '4FC08D' %}{% assign badge_logo = 'vuedotjs' %}
+  {% when 'Vite' %}{% assign badge_color = '646CFF' %}{% assign badge_logo = 'vite' %}
+  {% when 'Web Audio API' %}{% assign badge_color = '005A9C' %}{% assign badge_logo = 'webauthn' %}
+  {% when 'Spring Boot' or 'Spring Boot 4' or 'Spring Data JPA' %}{% assign badge_color = '6DB33F' %}{% assign badge_logo = 'springboot' %}
+  {% when 'FastAPI' %}{% assign badge_color = '009688' %}{% assign badge_logo = 'fastapi' %}
+  {% when 'Node.js' %}{% assign badge_color = '339933' %}{% assign badge_logo = 'nodedotjs' %}
+  {% when 'SQLAlchemy' %}{% assign badge_color = 'D71F00' %}{% assign badge_logo = 'sqlalchemy' %}
+  {% when 'MySQL' or 'MySQL 8.4' %}{% assign badge_color = '4479A1' %}{% assign badge_logo = 'mysql' %}
+  {% when 'PostgreSQL' %}{% assign badge_color = '4169E1' %}{% assign badge_logo = 'postgresql' %}
+  {% when 'SQLite' %}{% assign badge_color = '003B57' %}{% assign badge_logo = 'sqlite' %}
+  {% when 'Supabase' or 'Realtime' %}{% assign badge_color = '3FCF8E' %}{% assign badge_logo = 'supabase' %}{% assign badge_logo_color = '101010' %}
+  {% when 'Docker' %}{% assign badge_color = '2496ED' %}{% assign badge_logo = 'docker' %}
+  {% when 'REST API' %}{% assign badge_color = '6B7280' %}{% assign badge_logo = 'swagger' %}
+  {% when 'OAuth' %}{% assign badge_color = 'EB5424' %}{% assign badge_logo = 'auth0' %}
+  {% when 'WebSocket' %}{% assign badge_color = '010101' %}{% assign badge_logo = 'socketdotio' %}
+  {% when 'SSE' %}{% assign badge_color = '6B7280' %}{% assign badge_logo = 'serverless' %}
+  {% when 'go-keyring' %}{% assign badge_color = '00ADD8' %}{% assign badge_logo = 'go' %}
+  {% when 'PyTorch' %}{% assign badge_color = 'EE4C2C' %}{% assign badge_logo = 'pytorch' %}
+  {% when 'TensorFlow' %}{% assign badge_color = 'FF6F00' %}{% assign badge_logo = 'tensorflow' %}
+  {% when 'scikit-learn' %}{% assign badge_color = 'F7931E' %}{% assign badge_logo = 'scikitlearn' %}
+  {% when 'LangChain' %}{% assign badge_color = '1C3C3C' %}{% assign badge_logo = 'langchain' %}
+  {% when 'Chroma' %}{% assign badge_color = 'FFDE2D' %}{% assign badge_logo = 'googlechrome' %}{% assign badge_logo_color = '000000' %}
+  {% when 'Pandas' %}{% assign badge_color = '150458' %}{% assign badge_logo = 'pandas' %}
+  {% when 'NumPy' %}{% assign badge_color = '013243' %}{% assign badge_logo = 'numpy' %}
+  {% when 'Transformers' or 'Qwen-VL' %}{% assign badge_color = 'FFD21E' %}{% assign badge_logo = 'huggingface' %}{% assign badge_logo_color = '000000' %}
+  {% when 'OpenAI' or 'OpenAI Responses API' %}{% assign badge_color = '412991' %}{% assign badge_logo = 'openai' %}
+  {% when 'OpenCV' or 'Computer Vision' %}{% assign badge_color = '5C3EE8' %}{% assign badge_logo = 'opencv' %}
+  {% when 'YOLOv3' %}{% assign badge_color = '111F68' %}{% assign badge_logo = 'ultralytics' %}
+  {% when 'RAG' or 'BM25' or 'VQA' or 'LoRA' %}{% assign badge_color = '475569' %}{% assign badge_logo = 'probot' %}
+  {% when 'Google Maps API' %}{% assign badge_color = '4285F4' %}{% assign badge_logo = 'googlemaps' %}
+  {% when 'Chart.js' %}{% assign badge_color = 'FF6384' %}{% assign badge_logo = 'chartdotjs' %}
+  {% when 'Raspberry Pi' %}{% assign badge_color = 'A22846' %}{% assign badge_logo = 'raspberrypi' %}
+  {% when 'Unity' %}{% assign badge_color = '000000' %}{% assign badge_logo = 'unity' %}
+  {% when 'Vercel' %}{% assign badge_color = '000000' %}{% assign badge_logo = 'vercel' %}
+  {% when 'Netlify' %}{% assign badge_color = '00C7B7' %}{% assign badge_logo = 'netlify' %}{% assign badge_logo_color = '101010' %}
+  {% when 'Render' %}{% assign badge_color = '000000' %}{% assign badge_logo = 'render' %}
+  {% when 'Bubble Tea' or 'Lip Gloss' %}{% assign badge_color = 'FF69B4' %}{% assign badge_logo = 'go' %}
+  {% when 'imagezmq' %}{% assign badge_color = '4B5563' %}{% assign badge_logo = 'python' %}
+{% endcase %}
+{% assign badge_label = badge_name | replace: '-', '--' | url_encode | replace: '+', '%20' %}
+<img class="tech-badge" src="https://img.shields.io/badge/{{ badge_label }}-{{ badge_color }}?style=flat&amp;logo={{ badge_logo }}&amp;logoColor={{ badge_logo_color }}" alt="{{ badge_name | escape }}" loading="lazy" height="20">

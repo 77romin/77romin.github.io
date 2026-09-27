@@ -7,7 +7,7 @@
     <p class="project-meta">{{ project.period }} · {{ project.role }}</p>
     <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
     <p>{{ project.summary }}</p>
-    <ul class="tag-list" aria-label="사용 기술">{% for tech in project.stack limit: 4 %}<li>{{ tech }}</li>{% endfor %}</ul>
+    <ul class="tech-badge-list tech-badge-list-compact" aria-label="사용 기술">{% for tech in project.stack limit: 4 %}<li>{% include tech-badge.html name=tech %}</li>{% endfor %}</ul>
     <a class="card-link" href="{{ project.url | relative_url }}">자세히 보기 <span>→</span></a>
   </div>
 </article>

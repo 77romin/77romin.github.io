@@ -82,7 +82,7 @@ description: "문제를 끝까지 구조화하고 실제로 작동하는 소프�
     <div class="simple-heading reveal"><h2>Skills</h2></div>
     <div class="skills-grid">
       {% for skill_group in site.data.skills %}
-      <article class="skill-card reveal"><p>{{ skill_group.group }}</p><div>{% for item in skill_group.items %}<span>{{ item }}</span>{% endfor %}</div></article>
+      <article class="skill-card reveal"><p>{{ skill_group.group }}</p><ul class="tech-badge-list">{% for item in skill_group.items %}<li>{% include tech-badge.html name=item %}</li>{% endfor %}</ul></article>
       {% endfor %}
     </div>
   </div>

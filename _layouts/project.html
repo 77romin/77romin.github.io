@@ -25,7 +25,7 @@ layout: default
   <section class="project-content-section">
     <div class="section-shell project-content-grid">
       <aside class="project-stack">
-        <div class="project-stack-card"><p class="mini-label">Technology</p><ul class="tag-list">{% for tech in page.stack %}<li>{{ tech }}</li>{% endfor %}</ul></div>
+        <div class="project-stack-card"><p class="mini-label">Technology</p><ul class="tech-badge-list">{% for tech in page.stack %}<li>{% include tech-badge.html name=tech %}</li>{% endfor %}</ul></div>
       </aside>
       <div class="prose github-readme" data-github-readme data-repository="{{ page.github | remove: 'https://github.com/' | remove: 'http://github.com/' }}" data-branch="{{ page.readme_branch | default: 'main' }}" data-github-url="{{ page.github }}">
         <div class="readme-loading" role="status" aria-live="polite"><span></span><p>GitHub README를 불러오는 중입니다.</p></div>

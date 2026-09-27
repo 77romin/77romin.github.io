@@ -30,4 +30,4 @@ description: "개발자 김강민의 경험, 일하는 방식, 기술 역량"
   </div>
 </section>
 
-<section class="section section-shell skills-section"><div class="section-heading reveal"><div><p class="eyebrow">Skills</p><h2>사용하고 탐구하는 기술</h2></div></div><div class="skills-list">{% for skill_group in site.data.skills %}<div class="skill-row reveal"><h3>{{ skill_group.group }}</h3><ul>{% for item in skill_group.items %}<li>{{ item }}</li>{% endfor %}</ul></div>{% endfor %}</div></section>
+<section class="section section-shell skills-section"><div class="section-heading reveal"><div><p class="eyebrow">Skills</p><h2>사용하고 탐구하는 기술</h2></div></div><div class="skills-list">{% for skill_group in site.data.skills %}<div class="skill-row reveal"><h3>{{ skill_group.group }}</h3><ul class="tech-badge-list">{% for item in skill_group.items %}<li>{% include tech-badge.html name=item %}</li>{% endfor %}</ul></div>{% endfor %}</div></section>
