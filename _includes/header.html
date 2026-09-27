@@ -4,6 +4,7 @@
       <span class="sr-only">메뉴 열기</span><span></span><span></span>
     </button>
     <nav class="site-nav" id="site-navigation" aria-label="주요 메뉴" data-menu>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
       <a href="{{ '/projects/' | relative_url }}"{% if page.url == '/projects/' or page.collection == 'projects' %} aria-current="page"{% endif %}>Projects</a>
       <a href="{{ '/activities/' | relative_url }}"{% if page.url == '/activities/' %} aria-current="page"{% endif %}>Activities</a>
