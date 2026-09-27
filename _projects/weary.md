@@ -4,7 +4,7 @@ order: 1
 featured: true
 monogram: "WY"
 accent: "violet"
-image: "https://raw.githubusercontent.com/77romin/weary/main/docs/images/weary-closet.png"
+image: "https://raw.githubusercontent.com/77romin/weary/main/docs/images/weary-onboarding-closet.png"
 kind: "iOS · Fashion Platform"
 period: "2026"
 role: "iOS Developer"
