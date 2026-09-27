@@ -1,6 +1,6 @@
 ---
 title: "Intelligent Traffic Signal"
-order: 4
+order: 5
 featured: false
 monogram: "IT"
 accent: "blue"

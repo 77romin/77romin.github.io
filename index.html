@@ -1,5 +1,5 @@
 ---
-description: "문제를 구조화하고 끝까지 구현하는 개발자 김강민의 포트폴리오"
+description: "문제를 끝까지 구조화하고 실제로 작동하는 소프트웨어로 답하는 개발자 김강민의 포트폴리오"
 ---
 {% assign profile = site.data.profile %}
 
@@ -7,7 +7,7 @@ description: "문제를 구조화하고 끝까지 구현하는 개발자 김강�
   <div class="section-shell profile-grid">
     <div class="profile-copy reveal is-visible">
       <span class="hello">안녕하세요</span>
-      <h1>신뢰할 수 있는 경험을 만드는<br><em>소프트웨어 개발자</em><br>김강민입니다.</h1>
+      <h1>문제를 끝까지 구조화하고,<br><em>실제로 작동하는 소프트웨어</em>로<br>답하는 김강민입니다.</h1>
       <p>{{ profile.intro }}</p>
       <div class="contact-links">
         <a href="mailto:{{ profile.email }}"><span aria-hidden="true">✉</span>{{ profile.email }}</a>
@@ -36,15 +36,41 @@ description: "문제를 구조화하고 끝까지 구현하는 개발자 김강�
     <div class="experience-grid">
       {% for activity in site.data.activities %}
       <article class="experience-card reveal">
-        <div class="experience-cover cover-{{ forloop.index }}"><span>{{ activity.organization }}</span></div>
+        <div class="experience-cover cover-{{ forloop.index }}"><span>{{ activity.label }}</span></div>
         <div class="experience-body">
           <p class="activity-org">{{ activity.organization }}</p>
           <h3>{{ activity.title }}</h3>
           <p>{{ activity.description }}</p>
-          <div class="experience-footer"><span>{{ activity.period }}</span><a href="{{ activity.link }}" target="_blank" rel="noreferrer">자세히 보기 →</a></div>
+          <div class="experience-footer"><span>{{ activity.period }}</span><span>{{ activity.tags | join: ' · ' }}</span></div>
         </div>
       </article>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="content-section muted-section" id="credentials">
+  <div class="section-shell">
+    <div class="simple-heading reveal"><h2>Certifications & Awards</h2></div>
+    <div class="credentials-layout">
+      <div>
+        <p class="credential-label">Certifications</p>
+        <div class="credential-list">
+          {% for item in site.data.credentials.certifications %}
+          <article class="credential-item reveal"><div><strong>{{ item.name }}</strong><span>{{ item.detail }}</span></div><time>{{ item.date }}</time></article>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="credentials-side">
+        <div>
+          <p class="credential-label">Awards</p>
+          {% for item in site.data.credentials.awards %}<article class="credential-item reveal"><div><strong>{{ item.name }}</strong><span>{{ item.organization }}</span></div><time>{{ item.date }}</time></article>{% endfor %}
+        </div>
+        <div>
+          <p class="credential-label">Language</p>
+          <div class="language-list">{% for item in site.data.credentials.languages %}<span><strong>{{ item.name }}</strong>{{ item.level }}</span>{% endfor %}</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -62,7 +88,7 @@ description: "문제를 구조화하고 끝까지 구현하는 개발자 김강�
 
 <section class="about-summary">
   <div class="section-shell about-summary-grid">
-    <div><span class="section-label">ABOUT ME</span><h2>기술보다 먼저<br>문제의 맥락을 봅니다.</h2></div>
-    <div><p>새로운 기술을 빠르게 시험하되, 왜 필요한지 설명할 수 있는 선택을 지향합니다. 작은 단위로 검증하고 구현 과정의 판단과 시행착오를 기록합니다.</p><a href="{{ '/about/' | relative_url }}">About 자세히 보기 →</a></div>
+    <div><span class="section-label">ABOUT ME</span><h2>책임감과 실행력을<br>개발 역량으로 연결합니다.</h2></div>
+    <div><p>육군 장교로서 다양한 구성원과 협업하고 제한된 환경에서 임무를 완수한 경험을 바탕으로, 사용성·안정성·보안과 운영까지 고민하는 개발자로 성장하고 있습니다.</p><a href="{{ '/about/' | relative_url }}">About 자세히 보기 →</a></div>
   </div>
 </section>

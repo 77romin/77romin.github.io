@@ -1,18 +1,18 @@
-- period: "2026 — Present"
-  title: "Algorithm Study"
-  organization: "Personal Study"
-  description: "Java로 알고리즘 문제를 풀고 풀이를 축적하며, 자료구조와 문제 해결 패턴을 반복 학습하고 있습니다."
-  tags: ["Java", "Baekjoon", "Problem Solving"]
-  link: "https://github.com/77romin/solved_algorithm"
-- period: "2026"
-  title: "VQA Performance Enhancement"
-  organization: "AI Experiment & Analysis"
-  description: "VQA 파이프라인의 데이터, 학습 목표, 추론 방식을 분석하고 성능 향상 과정을 재현 가능한 문서로 정리했습니다."
-  tags: ["VQA", "PyTorch", "Experiment"]
-  link: "https://github.com/77romin/vqa-enhancement"
-- period: "2019"
-  title: "Computer Software Capstone Design"
-  organization: "KwangWoon University"
-  description: "Raspberry Pi와 객체 인식을 활용한 지능형 교통 신호 시스템을 팀 프로젝트로 설계하고 구현했습니다."
-  tags: ["Capstone", "YOLOv3", "Raspberry Pi"]
-  link: "https://github.com/77romin/CapstoneProject2019"
+- period: "2026.07 — Present"
+  title: "SSAFY 16th"
+  organization: "삼성 청년 SW·AI 아카데미"
+  description: "SW 기초부터 알고리즘, 웹과 AI 프로젝트까지 체계적으로 학습하며 실전 개발 역량을 확장하고 있습니다."
+  tags: ["Software", "AI", "Algorithm"]
+  label: "SSAFY"
+- period: "2020.03 — 2026.06"
+  title: "대한민국 육군 대위"
+  organization: "Republic of Korea Army"
+  description: "6년간 장교로 복무하며 다양한 구성원과 협업하고, 제한된 환경에서도 우선순위를 판단해 임무를 완수했습니다."
+  tags: ["Leadership", "Collaboration", "Execution"]
+  label: "ROKA"
+- period: "2016.03 — 2020.02"
+  title: "컴퓨터소프트웨어학과"
+  organization: "광운대학교"
+  description: "컴퓨터소프트웨어를 전공하고 Raspberry Pi와 객체 탐지를 활용한 지능형 교통 신호 시스템으로 졸업작품 전시회 우수상을 수상했습니다."
+  tags: ["Computer Science", "Capstone", "Award"]
+  label: "KWU"

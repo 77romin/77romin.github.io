@@ -14,6 +14,7 @@
 - 프로필 문구: `_data/profile.yml`
 - 기술 목록: `_data/skills.yml`
 - 활동 목록: `_data/activities.yml`
+- 자격·수상·어학: `_data/credentials.yml`
 - 프로젝트 상세: `_projects/*.md`
 - 공통 스타일: `assets/css/portfolio.css`
 

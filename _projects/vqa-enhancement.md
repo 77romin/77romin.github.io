@@ -1,6 +1,6 @@
 ---
 title: "VQA Enhancement"
-order: 3
+order: 6
 featured: true
 monogram: "VQ"
 accent: "violet"
@@ -9,7 +9,7 @@ period: "2026"
 role: "ML Engineer"
 focus: "데이터 · 학습 목표 · 추론 정렬"
 summary: "VQA 파이프라인의 병목을 분석하고 데이터 검증, answer-target 학습, 후보 점수 기반 추론으로 재설계한 실험입니다."
-stack: ["Python", "PyTorch", "Jupyter", "VLM", "LoRA"]
+stack: ["Python", "PyTorch", "Transformers", "LoRA", "VQA", "Computer Vision"]
 github: "https://github.com/77romin/vqa-enhancement"
 ---
 ## 높은 점수보다 설명 가능한 개선

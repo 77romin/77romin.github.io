@@ -1,8 +1,8 @@
-- group: "Core"
-  items: ["Java", "Python", "JavaScript", "SQL"]
-- group: "Web & Backend"
-  items: ["Spring Boot", "FastAPI", "Vue.js", "REST API"]
-- group: "Data & AI"
-  items: ["OpenAI API", "VQA", "YOLO", "Data Pipeline"]
-- group: "Tools"
-  items: ["Git", "GitHub Actions", "Docker", "Jekyll"]
+- group: "Languages"
+  items: ["Java", "C++", "JavaScript", "Python", "Go", "SQL"]
+- group: "Frontend & Mobile"
+  items: ["SwiftUI", "SwiftData", "Vue.js", "HTML5", "CSS3"]
+- group: "Backend & Data"
+  items: ["Spring Boot", "FastAPI", "MySQL", "SQLite", "Supabase", "Docker"]
+- group: "AI & Analytics"
+  items: ["PyTorch", "TensorFlow", "scikit-learn", "LangChain", "Pandas", "NumPy"]

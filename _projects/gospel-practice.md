@@ -1,6 +1,6 @@
 ---
 title: "Gospel Choir Practice"
-order: 2
+order: 3
 featured: true
 monogram: "GP"
 accent: "amber"
