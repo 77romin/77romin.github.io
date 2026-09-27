@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="{{ site.lang | default: 'ko-KR' }}">
   <head>
-    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ffffff">
-    <meta name="description" content="{{ page.description | default: site.description | escape }}">
-    <meta property="og:type" content="website"><meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}"><meta property="og:description" content="{{ page.description | default: site.description | escape }}"><meta property="og:image" content="{{ '/assets/img/profile.png' | absolute_url }}"><meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ffffff"><meta name="color-scheme" content="light">
+    <meta name="description" content="{{ page.description | default: page.summary | default: site.description | escape }}">
+    <meta property="og:type" content="website"><meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}"><meta property="og:description" content="{{ page.description | default: page.summary | default: site.description | escape }}"><meta property="og:image" content="{{ page.image | default: '/assets/img/profile.png' | absolute_url }}"><meta property="og:url" content="{{ page.url | absolute_url }}">
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <link rel="canonical" href="{{ page.url | absolute_url }}"><link rel="icon" href="{{ '/assets/img/favicons/favicon.ico' | relative_url }}" sizes="any"><link rel="apple-touch-icon" href="{{ '/assets/img/favicons/apple-touch-icon.png' | relative_url }}"><link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
   </head>
