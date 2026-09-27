@@ -1,5 +1,5 @@
 ---
-title: "minstock"
+title: "Minstock"
 order: 2
 featured: true
 monogram: "MS"
@@ -15,7 +15,7 @@ github: "https://github.com/77romin/minstock"
 ---
 ## 흩어진 증권 계좌를 하나의 터미널로
 
-minstock은 NH투자증권과 키움증권의 국내·미국주식 자산을 하나의 화면에서 확인하는 조회 전용 TUI입니다. 증권사마다 다른 인증과 응답 구조를 공통 도메인으로 통합해 일관된 포트폴리오 경험을 제공합니다.
+Minstock은 NH투자증권과 키움증권의 국내·미국주식 자산을 하나의 화면에서 확인하는 조회 전용 TUI입니다. 증권사마다 다른 인증과 응답 구조를 공통 도메인으로 통합해 일관된 포트폴리오 경험을 제공합니다.
 
 ## 구현한 핵심
 

@@ -1,6 +1,6 @@
 ---
 title: "LocalHub"
-order: 4
+order: 7
 featured: true
 monogram: "LH"
 accent: "lime"

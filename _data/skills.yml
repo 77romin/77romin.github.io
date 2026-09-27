@@ -1,8 +1,8 @@
 - group: "Languages"
   items: ["Java", "C++", "JavaScript", "Python", "Go", "SQL"]
 - group: "Frontend & Mobile"
-  items: ["SwiftUI", "SwiftData", "Vue.js", "HTML5", "CSS3"]
+  items: ["SwiftUI", "SwiftData", "Next.js", "TypeScript", "Vue.js", "HTML5", "CSS3"]
 - group: "Backend & Data"
-  items: ["Spring Boot", "FastAPI", "MySQL", "SQLite", "Supabase", "Docker"]
+  items: ["Spring Boot", "Spring Data JPA", "FastAPI", "MySQL", "PostgreSQL", "SQLite", "Supabase", "Docker"]
 - group: "AI & Analytics"
-  items: ["PyTorch", "TensorFlow", "scikit-learn", "LangChain", "Pandas", "NumPy"]
+  items: ["PyTorch", "TensorFlow", "scikit-learn", "LangChain", "RAG", "BM25", "Chroma", "Pandas", "NumPy"]

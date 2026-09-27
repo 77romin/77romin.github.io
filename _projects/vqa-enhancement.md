@@ -1,6 +1,6 @@
 ---
 title: "VQA Enhancement"
-order: 6
+order: 9
 featured: true
 monogram: "VQ"
 accent: "violet"
