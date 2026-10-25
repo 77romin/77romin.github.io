@@ -12,7 +12,7 @@ layout: default
         <div class="button-row">
           {% if page.demo %}<a class="button button-primary" href="{{ page.demo }}" target="_blank" rel="noreferrer">서비스 보기 <span>↗</span></a>{% endif %}
           {% if page.video %}<a class="button button-primary" href="{{ page.video }}" target="_blank" rel="noreferrer">시연 영상 <span>↗</span></a>{% endif %}
-          {% if page.github %}<a class="button button-secondary" href="{{ page.github }}" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>{% endif %}
+          {% if page.github %}<a class="button button-secondary" href="{{ page.github }}" target="_blank" rel="noreferrer">GitHub{% if page.private_repository %} (Private){% endif %} <span>↗</span></a>{% endif %}
         </div>
       </div>
       <dl class="project-facts">
@@ -27,10 +27,14 @@ layout: default
       <aside class="project-stack">
         <div class="project-stack-card"><p class="mini-label">Technology</p><ul class="tech-badge-list">{% for tech in page.stack %}<li>{% include tech-badge.html name=tech %}</li>{% endfor %}</ul></div>
       </aside>
-      <div class="prose github-readme" data-github-readme data-repository="{{ page.github | remove: 'https://github.com/' | remove: 'http://github.com/' }}" data-branch="{{ page.readme_branch | default: 'main' }}" data-github-url="{{ page.github }}">
-        <div class="readme-loading" role="status" aria-live="polite"><span></span><p>GitHub README를 불러오는 중입니다.</p></div>
-        <noscript><p>README를 보려면 JavaScript가 필요합니다. <a href="{{ page.github }}#readme" target="_blank" rel="noreferrer">GitHub에서 README 보기</a></p></noscript>
-      </div>
+      {% if page.static_readme %}
+        <div class="prose github-readme is-loaded">{{ content }}</div>
+      {% else %}
+        <div class="prose github-readme" data-github-readme data-repository="{{ page.github | remove: 'https://github.com/' | remove: 'http://github.com/' }}" data-branch="{{ page.readme_branch | default: 'main' }}" data-github-url="{{ page.github }}">
+          <div class="readme-loading" role="status" aria-live="polite"><span></span><p>GitHub README를 불러오는 중입니다.</p></div>
+          <noscript><p>README를 보려면 JavaScript가 필요합니다. <a href="{{ page.github }}#readme" target="_blank" rel="noreferrer">GitHub에서 README 보기</a></p></noscript>
+        </div>
+      {% endif %}
     </div>
   </section>
   <nav class="section-shell project-next" aria-label="프로젝트 목록으로 이동"><p>More work</p><a href="{{ '/projects/' | relative_url }}">모든 프로젝트 보기 <span>→</span></a></nav>
