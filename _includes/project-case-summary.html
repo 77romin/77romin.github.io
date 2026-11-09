@@ -1,0 +1,24 @@
+{% assign case = page.case_summary %}
+<section class="case-summary section-shell" aria-labelledby="case-summary-title">
+  <div class="case-summary-heading">
+    <p class="mini-label">프로젝트 이야기</p>
+    <h2 id="case-summary-title">{{ case.title }}</h2>
+  </div>
+  <dl class="case-outcomes">
+    {% for outcome in case.outcomes %}
+    <div>
+      <dt>{{ outcome.label }}</dt>
+      <dd>{{ outcome.value }}<span>{{ outcome.note }}</span></dd>
+    </div>
+    {% endfor %}
+  </dl>
+  <div class="case-sections">
+    {% for section in case.sections %}
+    <section class="case-section">
+      <h3><span aria-hidden="true">0{{ forloop.index }}</span>{{ section.title }}</h3>
+      <p>{{ section.text }}</p>
+    </section>
+    {% endfor %}
+  </div>
+  <a class="case-detail-link" href="#technical-record">구현과 검증 기록 더 읽기 <span aria-hidden="true">↓</span></a>
+</section>

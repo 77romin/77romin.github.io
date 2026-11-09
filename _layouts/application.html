@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FAF5F0">
+    {% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+    <title>{{ page.title | escape }} · 김강민</title>
+    <meta name="description" content="{{ page.description | escape }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title | escape }} · 김강민">
+    <meta property="og:description" content="{{ page.description | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" href="{{ '/assets/img/favicons/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="preload" href="{{ '/assets/fonts/pretendard/PretendardVariable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/blinker/Blinker-800.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/aigen.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+  </head>
+  <body class="aigen-page">
+    <a class="skip-link" href="#main-content">본문으로 바로가기</a>
+    {{ content }}
+    <script src="{{ '/assets/js/aigen.js' | relative_url }}" defer></script>
+  </body>
+</html>

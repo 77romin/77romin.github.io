@@ -1,0 +1,231 @@
+---
+layout: application
+title: "SK AIGEN 1기 지원 포트폴리오"
+permalink: /sk-aigen/
+noindex: true
+description: "김강민의 SK AIGEN 1기 지원 포트폴리오. 성가대 연습실, 의료 AI 실험, 군 복무에서 질문을 바꾼 세 장면과 앞으로 2년의 창업 가설."
+pdf: /assets/sk-aigen/kim-kangmin-aigen-portfolio.pdf
+---
+{% assign story = site.data.aigen %}
+<header class="page-header shell">
+  <div class="header-identity">
+    <a class="name-link" href="{{ '/' | relative_url }}">김강민 <span>포트폴리오</span></a>
+    <p class="context">SK AIGEN 1기 지원 포트폴리오, <span class="keep">2026년 11월</span></p>
+  </div>
+  <a class="text-link" href="{{ page.pdf | relative_url }}" download="김강민_AIGEN_포트폴리오.pdf">PDF 다운로드 <span aria-hidden="true">↓</span></a>
+</header>
+
+<main id="main-content">
+  <section class="hero shell" aria-labelledby="intro-title">
+    <h1 id="intro-title">{{ story.title }}</h1>
+    <p class="hero-intro">{{ story.intro }}</p>
+    <div class="hero-links">
+      <a class="button" href="#prelude">경험 읽기 <span aria-hidden="true">↓</span></a>
+      <a class="text-link" href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a>
+    </div>
+  </section>
+
+  <nav class="score-nav" aria-label="경험 목차">
+    <div class="score-nav-inner shell">
+      {% for chapter in story.chapters %}
+      <a class="score-link score-link-{{ chapter.id }}" href="#{{ chapter.id }}">
+        <span class="score-strip" aria-hidden="true"></span>
+        <span class="score-label">{{ chapter.label }}</span>
+        <span class="score-title">{{ chapter.title }}</span>
+        <span class="score-description">{{ chapter.subtitle }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </nav>
+
+  <section class="chapter shell chapter-prelude" id="prelude" aria-labelledby="prelude-title">
+    <div class="chapter-heading">
+      <p class="chapter-mark"><span>전주</span> 이런 사람입니다</p>
+      <p class="first-thought"><span class="sr-only">처음 생각: </span><del>{{ story.prelude.was }}</del></p>
+      <h2 id="prelude-title">{{ story.prelude.title }}</h2>
+      <p class="chapter-intro">{{ story.prelude.intro }}</p>
+    </div>
+    <div class="prelude-scenes">
+      {% for scene in story.prelude.scenes %}
+      <section>
+        <p class="scene-year">{{ scene.year }}</p>
+        <h3>{{ scene.title }}</h3>
+        <p>{{ scene.text }}</p>
+      </section>
+      {% endfor %}
+    </div>
+    <ol class="career-track" aria-label="이력">
+      {% for item in story.prelude.timeline %}
+      <li><p class="career-period">{{ item.period }}</p><p>{{ item.text }}</p></li>
+      {% endfor %}
+    </ol>
+    <div class="credentials-grid">
+      {% for group in story.prelude.credentials %}
+      <section>
+        <h3>{{ group.title }}</h3>
+        <ul>{% for item in group.items %}<li>{{ item }}</li>{% endfor %}</ul>
+      </section>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="chapter shell" id="gospel" aria-labelledby="gospel-title">
+    <div class="chapter-heading">
+      <p class="chapter-mark"><span>1절</span> 문제를 발견하다</p>
+      <p class="first-thought"><span class="sr-only">처음 생각: </span><del>{{ story.gospel.was }}</del></p>
+      <h2 id="gospel-title">{{ story.gospel.title }}</h2>
+      <p class="chapter-intro">{{ story.gospel.intro }}</p>
+    </div>
+    <figure class="diagram">
+      <a class="diagram-image" href="{{ '/assets/sk-aigen/diagram-gospel.png' | relative_url }}" target="_blank" rel="noopener" aria-label="연습 흐름 비교 그림 크게 보기 (새 창)">
+        <img src="{{ '/assets/sk-aigen/diagram-gospel.png' | relative_url }}" width="4416" height="1956" alt="만들기 전과 만든 뒤의 개인 연습, 합창 연습 흐름 비교" loading="lazy">
+      </a>
+      <figcaption>연습 흐름 비교. 설명을 위해 그린 그림입니다. <a href="{{ '/assets/sk-aigen/diagram-gospel.png' | relative_url }}" target="_blank" rel="noopener">그림 크게 보기 ↗</a></figcaption>
+    </figure>
+    <p class="reflection">{{ story.gospel.reflection }}</p>
+
+    <div class="practice-grid">
+      <figure class="practice-screen">
+        <a href="{{ '/assets/sk-aigen/gospel-practice-mobile.png' | relative_url }}" target="_blank" rel="noopener" aria-label="휴대폰 개인 연습 화면 전체 보기 (새 창)">
+          <img src="{{ '/assets/sk-aigen/gospel-practice-mobile.png' | relative_url }}" alt="휴대폰 개인 연습 화면: 파트 선택, 악보, 색 연습 구간과 재생 버튼" loading="lazy">
+        </a>
+        <figcaption>{{ story.gospel.screen_caption }}</figcaption>
+      </figure>
+      <div class="practice-story">
+        <p class="usage"><strong>13</strong><span>명의 성가대원이<br>이 앱으로 연습했습니다</span></p>
+        <ol class="releases">
+          {% for release in story.gospel.releases %}
+          <li>
+            <p class="release-when">{{ release.when }}</p>
+            <h3>{{ release.title }}</h3>
+            <p>{{ release.text }}</p>
+          </li>
+          {% endfor %}
+        </ol>
+        <p class="evidence-note">{{ story.gospel.evidence_note }}</p>
+        <div class="chapter-links">
+          <a class="button" href="https://gospel.letsgomin.com/" target="_blank" rel="noopener">직접 사용하기 <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="{{ '/projects/gospel-practice/' | relative_url }}">개발 기록 읽기</a>
+        </div>
+      </div>
+    </div>
+    <p class="reflection">{{ story.gospel.learning }}</p>
+  </section>
+
+  <section class="chapter chapter-meddb" id="meddb" aria-labelledby="meddb-title">
+    <div class="shell">
+      <div class="chapter-heading">
+        <p class="chapter-mark"><span>2절</span> 예상이 빗나가다</p>
+        <p class="first-thought"><span class="sr-only">처음 생각: </span><del>{{ story.meddb.was }}</del></p>
+        <h2 id="meddb-title">{{ story.meddb.title }}</h2>
+      </div>
+      <div class="experiment-grid">
+        <div class="experiment-story">
+          {% for step in story.meddb.story %}
+          <div class="story-step"><h3>{{ step.title }}</h3><p>{{ step.text }}</p></div>
+          {% endfor %}
+        </div>
+        <figure class="diagram diagram-meddb">
+          <a href="{{ '/assets/sk-aigen/diagram-meddb.png' | relative_url }}" target="_blank" rel="noopener" aria-label="MedDB 실험 과정 그림 크게 보기 (새 창)">
+            <img src="{{ '/assets/sk-aigen/diagram-meddb.png' | relative_url }}" width="1656" height="2766" alt="처음 가설, 지표 정체, 기본부터 하나씩, 두 번째 반전, 덜어내기로 이어지는 다섯 단계" loading="lazy">
+          </a>
+          <figcaption><a href="{{ '/assets/sk-aigen/diagram-meddb.png' | relative_url }}" target="_blank" rel="noopener">그림 크게 보기 ↗</a></figcaption>
+        </figure>
+      </div>
+      <div class="sample-result">
+        <p class="sample-number"><strong>77.498</strong><span>공개 3증례<br>샘플 평가 점수</span></p>
+        <p>{{ story.meddb.result }}</p>
+      </div>
+      <div class="scores-wrap">
+        <table class="scores">
+          <caption>후보별 샘플 점수 <span>(100점 만점)</span></caption>
+          <thead><tr><th scope="col">후보</th><th scope="col">샘플 점수</th></tr></thead>
+          <tbody>
+            {% for score in story.meddb.scores %}
+            <tr{% if forloop.last %} class="final-candidate"{% endif %}>
+              <th scope="row">{{ score.label }}</th>
+              <td><span class="score-bar" style="--score: {{ score.value }}%" aria-hidden="true"></span><span class="score-number">{{ score.value }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <p class="evidence-note">{{ story.meddb.evaluation_note }}</p>
+      </div>
+      <div class="contributions">
+        {% for role in story.meddb.roles %}
+        <div><h3>{{ role.title }}</h3><p>{{ role.text }}</p></div>
+        {% endfor %}
+      </div>
+      <p class="reflection">{{ story.meddb.learning }}</p>
+      <a class="text-link" href="{{ '/projects/meddb/' | relative_url }}">MedDB 개발 기록 읽기</a>
+    </div>
+  </section>
+
+  <section class="chapter shell chapter-together" id="together" aria-labelledby="together-title">
+    <div class="chapter-heading">
+      <p class="chapter-mark"><span>후렴</span> 반대를 합의로</p>
+      <p class="first-thought"><span class="sr-only">처음 생각: </span><del>{{ story.together.was }}</del></p>
+      <h2 id="together-title">{{ story.together.title }}</h2>
+      <p class="chapter-intro">{{ story.together.intro }}</p>
+    </div>
+    <figure class="diagram">
+      <a class="diagram-image" href="{{ '/assets/sk-aigen/diagram-army.png' | relative_url }}" target="_blank" rel="noopener" aria-label="복장 기준 개선 건의 과정 그림 크게 보기 (새 창)">
+        <img src="{{ '/assets/sk-aigen/diagram-army.png' | relative_url }}" width="4416" height="2016" alt="대대장과 소대장이 각자 지키려던 것과 두 가지 근거가 하나의 대안으로 모여 승인된 과정" loading="lazy">
+      </a>
+      <figcaption><a href="{{ '/assets/sk-aigen/diagram-army.png' | relative_url }}" target="_blank" rel="noopener">그림 크게 보기 ↗</a></figcaption>
+    </figure>
+    <div class="contributions">
+      {% for step in story.together.story %}
+      <div><h3>{{ step.title }}</h3><p>{{ step.text }}</p></div>
+      {% endfor %}
+    </div>
+    <p class="evidence-note">{{ story.together.note }}</p>
+  </section>
+
+  <section class="chapter chapter-next" id="next" aria-labelledby="next-title">
+    <div class="shell">
+      <div class="chapter-heading">
+        <p class="chapter-mark"><span>다음 곡</span> AIGEN에서의 2년</p>
+        <p class="first-thought"><span class="sr-only">처음 생각: </span><del>{{ story.next.was }}</del></p>
+        <h2 id="next-title">{{ story.next.title }}</h2>
+        <p class="chapter-intro">{{ story.next.intro }}</p>
+      </div>
+      <div class="year-plan">
+        <section>
+          <h3><span>1년차</span> 2027년, 실제 문제를 풀며 성장</h3>
+          <ol class="plan-modules">
+            {% for item in story.next.tries limit: 3 %}
+            <li><p class="module">{{ item.module }}</p><h4>{{ item.title }}</h4><p>{{ item.text }}</p></li>
+            {% endfor %}
+          </ol>
+        </section>
+        <section>
+          <h3><span>2년차</span> 2028년, 진로를 현장에서</h3>
+          <ol class="plan-modules">
+            {% for item in story.next.tries offset: 3 %}
+            <li><p class="module">{{ item.module }}</p><h4>{{ item.title }}</h4><p>{{ item.text }}</p></li>
+            {% endfor %}
+          </ol>
+        </section>
+      </div>
+      <section class="hypothesis" aria-labelledby="hypothesis-title">
+        <h3 id="hypothesis-title">{{ story.next.hypothesis_title }}</h3>
+        <dl>
+          {% for item in story.next.hypothesis %}
+          <div><dt>{{ item.label }}</dt><dd>{{ item.text }}</dd></div>
+          {% endfor %}
+        </dl>
+      </section>
+      <p class="reflection">{{ story.next.reflection }}</p>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer shell">
+  <div><strong>김강민</strong><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></div>
+  <div class="footer-links">
+    <a class="text-link" href="{{ page.pdf | relative_url }}" download="김강민_AIGEN_포트폴리오.pdf">PDF 다운로드 ↓</a>
+    <a class="text-link" href="{{ '/projects/' | relative_url }}">다른 프로젝트 살펴보기</a>
+    <a class="text-link" href="#intro-title">처음으로 ↑</a>
+  </div>
+</footer>

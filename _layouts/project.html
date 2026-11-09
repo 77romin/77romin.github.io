@@ -22,10 +22,11 @@ layout: default
       </dl>
     </div>
   </header>
-  <section class="project-content-section">
+  {% if page.case_summary %}{% include project-case-summary.html %}{% endif %}
+  <section class="project-content-section" id="technical-record" aria-label="구현과 검증 기록">
     <div class="section-shell project-content-grid">
       <aside class="project-stack">
-        <div class="project-stack-card"><p class="mini-label">Technology</p><ul class="tech-badge-list">{% for tech in page.stack %}<li>{% include tech-badge.html name=tech %}</li>{% endfor %}</ul></div>
+        <div class="project-stack-card"><p class="mini-label">Technology</p><ul class="tech-badge-list">{% for tech in page.stack %}<li>{% include tech-badge.html name=tech %}</li>{% endfor %}</ul>{% if page.stack_note %}<p class="stack-note">{{ page.stack_note }}</p>{% endif %}</div>
       </aside>
       {% if page.static_readme %}
         <div class="prose github-readme is-loaded">{{ content }}</div>

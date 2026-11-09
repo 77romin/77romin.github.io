@@ -1,16 +1,17 @@
 ---
 title: "MapMates"
 order: 0
+home_order: 3
 featured: true
 monogram: "MM"
 accent: "amber"
-image: "https://raw.githubusercontent.com/77romin/mapmates/main/docs/screenshots/guide/06-main-explore.png"
+image: "https://raw.githubusercontent.com/77romin/mapmates/main/front/docs/screenshots/guide/06-main-explore.png"
 image_alt: "MapMates 지도 탐색과 주변 여행지 카드 화면"
-kind: "Frontend · Travel Web App"
+kind: "Full-stack · Team Project"
 period: "2026.10"
-role: "Frontend Developer"
+role: "Frontend / Backend Developer"
 focus: "지도 탐색 · 여행 일정 · 동행 커뮤니티"
-summary: "지도에서 여행지를 찾고 나만의 일정을 만든 뒤, 함께할 동행을 찾아 여행 이야기를 나누는 프론트엔드 여행 웹앱입니다."
-stack: ["HTML5", "CSS3", "JavaScript", "Kakao Maps API", "TourAPI", "Web Storage API", "Node.js"]
+summary: "지도 탐색부터 여행계획·동행 참여까지 연결하고, 서버·DB 확장 과정에서 저장과 참가 정합성을 다룬 팀 프로젝트입니다."
+stack: ["Java", "JavaScript", "MySQL", "JDBC", "Java Servlet", "HTML5", "CSS3", "Kakao Maps API", "TourAPI", "Docker"]
 github: "https://github.com/77romin/mapmates"
 ---

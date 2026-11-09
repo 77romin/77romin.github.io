@@ -1,5 +1,5 @@
 ---
-description: "문제를 끝까지 구조화하고 실제로 작동하는 소프트웨어로 답하는 개발자 김강민의 포트폴리오"
+description: "현장의 불편에서 질문을 찾고, 만들고 검증하며 배우는 개발자 김강민의 포트폴리오"
 ---
 {% assign profile = site.data.profile %}
 
@@ -7,7 +7,7 @@ description: "문제를 끝까지 구조화하고 실제로 작동하는 소프�
   <div class="section-shell profile-grid">
     <div class="profile-copy reveal is-visible">
       <span class="hello">안녕하세요</span>
-      <h1>문제를 끝까지 구조화하고,<br><em>실제로 작동하는 소프트웨어</em>로<br>답하는 김강민입니다.</h1>
+      <h1>{{ profile.headline }}</h1>
       <p>{{ profile.intro }}</p>
       <div class="contact-links">
         <a href="mailto:{{ profile.email }}">{% include icon-gmail.html %}{{ profile.email }}</a>
@@ -22,9 +22,10 @@ description: "문제를 끝까지 구조화하고 실제로 작동하는 소프�
 
 <section class="content-section" id="projects">
   <div class="section-shell">
-    <div class="simple-heading reveal"><h2>Projects</h2><a href="{{ '/projects/' | relative_url }}">View all →</a></div>
+    <div class="simple-heading reveal"><h2>대표 프로젝트</h2><a href="{{ '/projects/' | relative_url }}">전체 프로젝트 보기 →</a></div>
+    <p class="section-intro">현장에서 발견한 문제, 예상과 달랐던 실험, 함께 만든 서비스를 소개합니다.</p>
     <div class="project-grid">
-      {% assign ordered_projects = site.projects | sort: 'order' %}
+      {% assign ordered_projects = site.projects | where_exp: 'project', 'project.home_order != nil' | sort: 'home_order' %}
       {% for project in ordered_projects %}{% include project-card.html project=project index=forloop.index %}{% endfor %}
     </div>
   </div>
